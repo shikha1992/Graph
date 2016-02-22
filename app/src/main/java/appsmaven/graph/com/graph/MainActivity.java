@@ -419,6 +419,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             multiRenderer.setChartTitleTextSize(18);
             multiRenderer.setAxisTitleTextSize(14);
             multiRenderer.setLabelsTextSize(24);
+
+
             multiRenderer.setLabelsColor(Color.BLACK);
             multiRenderer.setLabelsTextSize(20);
             multiRenderer.setXLabelsColor(Color.BLACK);

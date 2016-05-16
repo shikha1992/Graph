@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="org.achartengine.chartdemo.demo.test"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-sdk android:minSdkVersion="1" android:targetSdkVersion="1" />
+
+    <application>
+        <uses-library android:name="android.test.runner" />
+    </application>
+
+    <instrumentation android:name="android.test.InstrumentationTestRunner"
+                     android:functionalTest="false"
+                     android:handleProfiling="false"
+                     android:label="Tests for org.achartengine.chartdemo.demo"
+                     android:targetPackage="org.achartengine.chartdemo.demo"/>
+</manifest>

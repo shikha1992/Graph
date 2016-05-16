@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="appsmaven.graph.com.graph.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_create"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardElevation="4dp">
+
+        <Button
+            android:id="@+id/btn_create"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/editext_bg"
+            android:padding="5dp"
+            android:text="Create A Metric"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
+    </android.support.v7.widget.CardView>
+
+
+
+
+    <LinearLayout
+        android:id="@+id/chart"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"></LinearLayout>
+</RelativeLayout>

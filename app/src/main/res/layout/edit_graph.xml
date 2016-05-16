@@ -1,0 +1,713 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout android:id="@+id/coordinator"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/toolbar_"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_gravity="center"
+                    android:text="Name:                         "
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+
+
+                    <EditText
+                        android:id="@+id/edt_vw_table_name"
+                        android:layout_width="170dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="center"
+                        android:background="@drawable/editext_bg"
+                        android:gravity="center"
+                        android:hint="Enter name"
+                        android:padding="5dp"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_gravity="center"
+                    android:text="Unit of\nmeasurement:            "
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+
+
+                    <EditText
+                        android:id="@+id/txt_measurmnt"
+                        android:layout_width="170dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="center"
+                        android:background="@drawable/editext_bg"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="  minutes   "
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_gravity="top"
+                    android:text="Date Span:"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/lnr_vw_start_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="5dp"
+                            android:text="Starting"
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp" />
+
+
+    <TextView
+        android:id="@+id/txt_vw_date_start"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/editext_bg"
+        android:gravity="center"
+        android:hint="Enter value"
+        android:padding="5dp"
+        android:textColor="@android:color/black"
+        android:textSize="14sp" />
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="5dp"
+        android:src="@mipmap/calender"
+        android:visibility="gone" />
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnr_vw_date_end"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="Until       "
+                            android:textColor="@android:color/black"
+                            android:textSize="14sp" />
+
+
+
+                            <TextView
+                                android:id="@+id/txt_vw_date_end"
+                                android:layout_width="160dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="@drawable/editext_bg"
+                                android:gravity="center"
+                                android:hint="Enter value"
+                                android:padding="5dp"
+                                android:textColor="@android:color/black"
+                                android:textSize="14sp" />
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="5dp"
+                            android:src="@mipmap/calender"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="Frequency"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="    I want to enter/track value \n    of this metric:"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp" />
+
+
+
+                        <LinearLayout
+                            android:id="@+id/lnr_vw_frequency"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/editext_bg"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/txt_freq"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:paddingBottom="5dp"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp"
+                                android:paddingTop="5dp"
+                                android:text="EveryDay"
+                                android:textColor="@android:color/black"
+                                android:textSize="14sp" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="right|center"
+                                android:gravity="right|center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="10dp"
+                                    android:layout_height="10dp"
+                                    android:src="@mipmap/up_arrow" />
+
+                                <ImageView
+                                    android:layout_width="10dp"
+                                    android:layout_height="10dp"
+                                    android:src="@mipmap/down_arrow" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txt_"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="Target:   "
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/chk_reminder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toLeftOf="@+id/lnr_"
+                    android:checked="true" />
+
+                <LinearLayout
+                    android:id="@+id/lnr_"
+                    android:layout_width="170dp"
+                   android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_marginTop="5dp"
+                        android:text="There are target \nvalues to aim for"
+                        android:textColor="@android:color/black"
+                        android:textSize="14sp" />
+
+
+                        <LinearLayout
+                            android:layout_width="170dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/editext_bg"
+                            android:orientation="vertical"
+                            android:padding="5dp">
+
+                            <LinearLayout
+                                android:id="@+id/lnr_vw_target_start"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:padding="5dp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:orientation="vertical">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:text="...starting at"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="14sp" />
+
+
+
+                                    <EditText
+                                        android:id="@+id/edt_vw_target_start"
+                                        android:layout_width="120dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginLeft="5dp"
+                                        android:layout_marginTop="5dp"
+                                        android:background="@drawable/editext_bg"
+                                        android:gravity="center"
+                                        android:hint="Enter value"
+                                        android:inputType="number"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="14sp" />
+                                </LinearLayout>
+
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="minutes"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="14sp"
+                                    android:visibility="gone" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/lnr_vw_target_end"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:text="...ending at   "
+                                    android:textColor="@android:color/black"
+                                    android:textSize="14sp" />
+
+
+
+                                    <EditText
+                                        android:id="@+id/edt_vw_target_end"
+                                        android:layout_width="120dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:layout_marginLeft="5dp"
+                                        android:layout_marginRight="5dp"
+                                        android:layout_marginTop="5dp"
+                                        android:background="@drawable/editext_bg"
+                                        android:gravity="center"
+                                        android:hint="Enter value"
+                                        android:inputType="number"
+                                        android:padding="5dp"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="14sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="minutes"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="14sp"
+                                    android:visibility="gone" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="8dp"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:text="the goal is to"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="14sp" />
+
+
+
+                                        <LinearLayout
+                                            android:id="@+id/lnr_vw_get_abov"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_marginBottom="5dp"
+                                            android:layout_marginTop="5dp"
+                                            android:background="@drawable/editext_bg"
+                                            android:orientation="horizontal"
+                                            android:paddingLeft="2dp"
+                                            android:paddingRight="5dp">
+
+                                            <TextView
+                                                android:id="@+id/txt_vw_get_above"
+                                                android:layout_width="120dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_marginLeft="5dp"
+                                                android:paddingBottom="5dp"
+                                                android:paddingTop="5dp"
+                                                android:text="Get at or below"
+                                                android:textColor="@android:color/black"
+                                                android:textSize="14sp" />
+
+
+                                        </LinearLayout>
+
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:text="the target value"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="14sp"
+                                    android:visibility="gone" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <!--Reminder-->
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txt_remn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="Reminders?"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/txt_remn"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/chk_reminder_yes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:checked="false" />
+
+                        <LinearLayout
+                            android:id="@+id/lnrr_"
+                            android:layout_width="170dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:gravity="right"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="left"
+                                android:layout_marginTop="5dp"
+                                android:gravity="left"
+                                android:text="Yes"
+                                android:textColor="@android:color/black"
+                                android:textSize="14sp" />
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:background="@drawable/editext_bg"
+                                android:orientation="vertical"
+                                android:paddingLeft="5dp"
+                                android:paddingRight="5dp">
+
+                                <RelativeLayout
+                                    android:layout_width="170dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/txt_send_remindr"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentTop="true"
+                                        android:layout_centerInParent="true"
+                                        android:layout_marginTop="10dp"
+                                        android:text="  send reminder at"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="14sp" />
+
+
+
+                                    <TextView
+                                        android:id="@+id/txt_vw_time_remindr"
+                                        android:layout_width="120dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/txt_send_remindr"
+                                        android:layout_centerInParent="true"
+                                        android:layout_marginBottom="10dp"
+                                        android:layout_marginLeft="5dp"
+                                        android:layout_marginTop="10dp"
+                                        android:background="@drawable/editext_bg"
+                                        android:gravity="center"
+                                        android:hint="time"
+                                        android:paddingBottom="5dp"
+                                        android:paddingLeft="5dp"
+                                        android:paddingRight="5dp"
+                                        android:paddingTop="5dp"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="14sp" />
+                                </RelativeLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <RadioGroup
+                                        android:id="@+id/radio_grp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
+                                        android:orientation="vertical"
+                                        android:visibility="gone">
+
+                                        <RadioButton
+                                            android:id="@+id/radio_daily"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="on days when value should be entered when not entered" />
+
+                                        <RadioButton
+                                            android:id="@+id/radio_selected_days"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="when value not entered within" />
+                                    </RadioGroup>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:visibility="gone">
+
+
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="5dp"
+                                        android:layout_marginLeft="20dp"
+                                        android:background="@drawable/editext_bg"
+                                        android:orientation="horizontal">
+
+                                        <EditText
+                                            android:id="@+id/edt_notify_days"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="top"
+                                          android:background="@android:color/transparent"
+                                            android:gravity="center"
+                                            android:padding="5dp"
+                                            android:text="1"
+                                            android:textColor="@android:color/black"
+                                            android:textSize="14sp" />
+                                    </LinearLayout>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center"
+                                        android:text=" day"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="14sp" />
+                                </LinearLayout>
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/btn_save"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimary"
+                    android:text="Save"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"/>
+                <Button
+                    android:id="@+id/btn_cancel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimary"
+                    android:text="Cancel"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

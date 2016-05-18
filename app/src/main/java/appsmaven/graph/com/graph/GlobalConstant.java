@@ -63,7 +63,7 @@ public class GlobalConstant {
         Calendar cal = Calendar.getInstance();
         Date currentLocalTime = cal.getTime();
 
-        DateFormat date = new SimpleDateFormat("HH:mm a");
+        DateFormat date = new SimpleDateFormat("hh:mm a");
 // you can get seconds by adding  "...:ss" to it
         //  date.setTimeZone(TimeZone.getTimeZone("GMT+1:00"));
         String localTime = date.format(currentLocalTime);

@@ -48,7 +48,7 @@ public class ServiceActivity extends Service {
     @Override
     public int onStartCommand(Intent intent, int flags, int startId)
         {
-
+            Log.e("inside","inside");
             // TODO Auto-generated method stub
             preferences = PreferenceManager
                     .getDefaultSharedPreferences(getApplicationContext());
@@ -58,11 +58,12 @@ public class ServiceActivity extends Service {
 
             if(reminder_chk.equals("yes")){
                 String current_time_ = GlobalConstant.get_current_time();
-                SimpleDateFormat sdf = new SimpleDateFormat("HH:mm a");
+                SimpleDateFormat sdf = new SimpleDateFormat("hh:mm");
                 Date current_dt = null;
                 Date save_dt = null;
                 if(time_!="0"){
                     Log.e("current_time",current_time_);
+                    Log.e("svdt_time",time_);
                     try {
                         current_dt = sdf.parse(current_time_);
                     } catch (ParseException e) {
@@ -76,6 +77,8 @@ public class ServiceActivity extends Service {
                     }
 
                     if(current_dt.equals(save_dt)){
+                        Log.e("current_dt",current_dt+"");
+                        Log.e("save_dt",save_dt+"");
                         if(counter.equals(0)){
                             Calendar now = Calendar.getInstance();
                             int a = now.get(Calendar.AM_PM);
@@ -90,10 +93,14 @@ public class ServiceActivity extends Service {
                                     generatenotification();
                                 }
                             }
+                            Intent myIntent = new Intent(getApplicationContext(), ServiceActivity.class);
+                            startService(myIntent);
 
                         }
                         else{
                             counter++;
+                            Intent myIntent = new Intent(getApplicationContext(), ServiceActivity.class);
+                            startService(myIntent);
                         }
 
                     }else{
@@ -184,6 +191,9 @@ public class ServiceActivity extends Service {
         if(counter==0){
             notificationManager.notify(notificatn_counter, not);
         }
+        Intent myIntent = new Intent(getApplicationContext(), ServiceActivity.class);
+        startService(myIntent);
+
         counter++;
     }
 

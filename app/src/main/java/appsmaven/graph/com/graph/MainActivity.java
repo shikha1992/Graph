@@ -293,7 +293,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             expenseRenderer.setColor(Color.rgb(255 , 64, 129));
             expenseRenderer.setFillPoints(false);
             expenseRenderer.setLineWidth(5);
-            incomeRenderer.setColor(Color.rgb(63 ,81 ,198));
+            incomeRenderer.setColor(Color.rgb(134 , 197, 230));
             incomeRenderer.getChartValuesTextSize();
             incomeRenderer.setChartValuesTextSize(40f);
             incomeRenderer.setChartValuesTextAlign(Paint.Align.CENTER);
@@ -323,7 +323,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             multiRenderer.addSeriesRenderer(incomeRenderer);
 
             String measurmnt = preferences.getString("measurmnt", "minutes");
-            multiRenderer.setYTitle(measurmnt, 0);
+            multiRenderer.setYTitle("", 0);
 
             multiRenderer.setMarginsColor(Color.WHITE);
             multiRenderer.setBackgroundColor(Color.BLACK);
@@ -334,15 +334,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             multiRenderer.setLabelsTextSize(40f);
             multiRenderer.setLabelsColor(Color.BLACK);
             multiRenderer.setLabelsTextSize(40f);
-            multiRenderer.setXLabelsColor(Color.BLUE);
+            multiRenderer.setXLabelsColor(Color.rgb(134 , 197, 230));
             multiRenderer.setAntialiasing(true);
             multiRenderer.setZoomEnabled(true);
             multiRenderer.setPanEnabled(true, false);
             multiRenderer.setFitLegend(false);
             multiRenderer.setLegendTextSize(30f);
-            multiRenderer.setYLabelsColor(0, Color.BLUE);
+            multiRenderer.setYLabelsColor(0, Color.rgb(134 , 197, 230));
             multiRenderer.setAxesColor(Color.BLACK);
-            multiRenderer.setShowLegend(true);
+            multiRenderer.setShowLegend(false);
             multiRenderer.setPointSize(10);
             multiRenderer.setShowGrid(true);
             multiRenderer.setShowGrid(true);
